@@ -1,0 +1,5 @@
+/* pages/demo10/demo10.wxss */
+swiper{
+  width: 100%;
+  height: 80vh;
+}

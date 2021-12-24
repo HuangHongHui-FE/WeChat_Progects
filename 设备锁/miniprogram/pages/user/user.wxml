@@ -1,0 +1,65 @@
+<view>
+  <view class='info' wx:if="{{!userinfo}}">
+    <button type="primary" plain="true" hover-class="none" bindtap="getUserProfile">登录授权</button>
+  </view>
+
+
+  <view wx:elif="{{!userinfo.isAdmin}}">
+    <view class="tou_ni">
+      <view>
+        <image src="{{userinfo.avatarUrl}}" mode="aspectFill" class="touxiang" mode="scaleToFill"></image>
+      </view>
+      <view class="nicheng">{{userinfo.nickName}}</view>
+    </view>
+
+    <view class="ing">
+      <navigator open-type="navigate" url="/pages/ing/ing" class="ing_txt">正在使用中</navigator>
+    </view>
+    <view class="hengxian"></view>
+
+    <view class="history">
+        <navigator url="/pages/history/history" hover-class="nav-hover" class="history_nav" open-type='navigate'>历史记录</navigator>
+    </view>
+
+    <view class="hengxian"></view>
+
+    <view class="history">
+      <navigator url="/pages/admin_app/admin_app" hover-class="nav-hover" open-type='navigate' class="history_nav">申请为管理员</navigator>
+    </view>
+    <view class="hengxian"></view>
+
+    <view class="suggest">
+      <button open-type="contact" style="background-color: rgba(241, 241, 240, 0.863);">问题反馈</button>
+    </view>
+  </view>
+
+
+
+  <view wx:else>
+    <view class="tou_ni">
+      <view>
+        <image src="{{userinfo.avatarUrl}}" mode="aspectFill" class="touxiang" mode="scaleToFill"></image>
+      </view>
+      <view class="nicheng">{{userinfo.nickName}}</view>
+    </view>
+
+    <view class="ing">
+      <navigator class="ing_txt" open-type="navigate" url="/pages/ing/ing"><text>正在使用中的</text></navigator>
+    </view>
+    <view class="hengxian"></view>
+
+    <view class="history">
+        <navigator url="/pages/history/history" hover-class="nav-hover" class="history_nav" open-type='navigate'>历史记录</navigator>
+    </view>
+    <view class="hengxian"></view>
+
+    <view class="history">
+      <navigator url="/pages/my_parking/my_parking" hover-class="nav-hover" open-type='navigate' class="history_nav">管理我的车位</navigator>
+    </view>
+    <view class="hengxian"></view>
+
+    <view class="suggest">
+      <button open-type="contact" style="background-color: rgba(241, 241, 240, 0.863);">问题反馈</button>
+    </view>
+  </view>
+</view>

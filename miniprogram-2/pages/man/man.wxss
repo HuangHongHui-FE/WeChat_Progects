@@ -1,0 +1,63 @@
+.contioner{
+  background-color: rgb(77, 230, 222);
+  height: 60vh;
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.man1{
+  border:2px solid rgb(230, 79, 91);
+  border-width: 5rpx;
+  padding: 20rpx;
+  width: 250rpx;
+  padding-bottom: 20rpx;
+}
+.man2{
+  border:2px solid rgb(221, 47, 198);
+  border-width: 5rpx;
+  padding: 20rpx;
+  width: 250rpx;
+}
+.text1{
+  border:2px solid rgb(224, 150, 53);
+  border-width: 5rpx;
+  padding: 10rpx;
+  width: 140px;
+  float: left;
+}
+.bp{
+  display: flex;
+  flex-direction: row;
+}
+.contioner2{
+  background-color: rgb(230, 215, 77);
+  height: 20vh;
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.zf{
+  border:2px solid yellowgreen;
+  border-width: 3px;
+  font-size: 20px;
+  color: brown;
+  width: 200px;
+  height: 10vh;
+}
+.text3{
+  background-color: khaki;
+  padding-left: 30vh;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contioner3{
+  background-color: rgb(113, 244, 86);
+}
+.image1{
+  padding-left: 30px;
+}

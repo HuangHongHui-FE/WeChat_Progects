@@ -1,0 +1,139 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view>
+  <text>当前时间：{{time}}</text>
+  </view>
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+  <!-- 2.2.2 数据绑定 -->
+  <view>
+  <text>当前时间：{{time}}</text>    
+
+  <text data-text="{{text}}">hello world</text>
+  <!-- 属性值的绑定 -->
+  </view>
+
+
+  <!-- 2.2.3逻辑语法 -->
+  <view> 
+  <text>{{ a === 10? "变量 a 等于10": "变量 a 不等于10"}}</text>
+  <!-- 三元运算 -->
+  {{a + b}} + {{c}} + d 
+  <!-- 算数运算 -->
+  {{"hello " + name}}
+  <!-- 字符串拼接 -->
+  <text>{{[1,2,3]}}</text>
+  <text>{{"hello world"}}</text>
+  </view>
+
+
+  <!-- 2.2.4条件逻辑 -->
+  <view wx:if="{{condition}}"> True </view>   
+  <!-- 使用 wx:if="{{condition}}" 来判断是否需要渲染该代码块 -->
+  <view wx:if="{{length > 5}}"> 1 </view>
+  <view wx:elif="{{length > 2}}"> 2 </view>
+  <view wx:else> 3 </view>
+  
+  <!-- <block wx:if="{{true}}">
+  <view> view1 </view>
+  <view> view2 </view>
+  </block> -->
+  <!-- 使用block包装可进行多组判断 -->
+
+
+  <!-- 2.2.5列表渲染 -->
+  <view wx:for="{{array}}">
+  {{index}}: {{item.message}}
+  </view>
+
+  <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+  {{idx}}: {{itemName.message}}
+  </view>
+  <!-- 使用 wx:for-item 指定数组当前元素的变量名，使用 wx:for-index 指定数组当前下标的变量名 -->
+  <block wx:for="{{[1, 2, 3]}}">
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+  </block>
+  <!-- 渲染一个包含多节点的结构块 -->
+
+  <switch wx:for="{{objectArray}}" wx:key="unique" > {{item.id}} </switch>
+  <button bindtap="switch"> Switch </button>
+  <button bindtap="addToFront"> Add to the front </button>
+  <!-- 使用 wx:key 来指定列表中项目的唯一的标识符 -->
+
+
+  <!-- 2.2.6模板 -->
+  <template name="msgItem">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+  </template>
+  <template is="msgItem" data="{{...item}}"/>
+
+  <template name="odd">
+    <view> odd </view>
+  </template>
+  <template name="even">
+    <view> even </view>
+  </template>
+  <block wx:for="{{[1, 2, 3, 4, 5]}}">
+  <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+  </block>
+  <!-- 动态使用模板 -->
+
+
+<!-- 2.2.7 引用 -->
+  <template name="item">
+    <text>{{text}}</text>
+  </template>
+
+  <import src="index.wxml"/>
+  <template is="item" data="{{text:'forbar'}}"/>
+<!-- import 但其不具有传递性 -->
+<!-- <view>header</view>
+<include src="index.wxml"/>
+<view> body </view>
+<include src="footer.wxml"/> -->
+<!-- include将目标文件中除了 <template/> <wxs/> 外的整个代码引入 -->
+
+
+<!-- 2.2.8共同属性 -->
+<!-- 属性名	      类型	   描述	            注解
+     id	         String	  组件的唯一标识	  整个页面唯一
+     class	     String	  组件的样式类	    在对应的 WXSS 中定义的样式类
+     style	     String	  组件的内联样式	  可以动态设置的内联样式
+     hidden	     Boolean	组件是否显示	    所有组件默认显示
+     data-*	     Any	    自定义属性	      组件上触发的事件时，会发送给事件处理函数
+     bind*/catch*	EventHandler	组件的事件 -->
+
+
+
+
+    <!-- 2.3.3 WXSS的引用 -->
+    <!--     @import './test_0.wxss'     -->
+
+    <!-- 2.3.4 内联样式 -->
+  <view style="color: red; font-size: 48rpx">text</view>
+
+{
+  eleColor: 'red',
+  eleFontsize: '48rpx'    
+}
+  <view style="color: {{eleColor}}; font-size: {{eleFontsize}}">的吧</view>
+<!-- 动态更新的内联样式 -->
+
+
+  <!-- 2.3.5 选择器 -->
+<!-- https://developers.weixin.qq.com/ebook?action=get_post_info&docid=000c44c49141887b00864fbba5100a&token=1306925080 -->

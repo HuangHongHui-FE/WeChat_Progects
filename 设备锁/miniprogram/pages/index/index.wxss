@@ -1,0 +1,81 @@
+@import "/icon/icon.wxss";
+.index1{
+  color: rgb(250, 249, 249);
+  font-size: 35rpx;
+  border: 2px solid #9ee9ae;
+  color: rgb(0, 7, 2);
+  width: 60%;
+  margin-top: 70vh;
+  margin: auto;
+  text-align: center;
+  height: 6vh;
+  padding-top: 2vh;
+}
+.not_login{
+  margin-top:75vh;
+}
+.location{
+  position: fixed;
+  z-index: 10;
+  margin-top: 85vh;
+  margin-left: 85vw;
+}
+.jia_btn{
+  position: fixed;
+  z-index:10;
+  margin-top:68vh;
+  margin-left:85vw;
+}
+.jia{
+  width:5vw;
+  height:5vh;
+}
+.jian_btn{
+  position: fixed;
+  z-index:11;
+  margin-top:75vh;
+  margin-left:85vw;
+}
+.jian{
+  width:5vw;
+  height:5vh;
+}
+.kong{
+  position: fixed;
+  z-index:10;
+  margin-top:2vh;
+  margin-left:3vw;
+  color:#00FA9A;
+}
+.yi{
+  position: fixed;
+  z-index:10;
+  margin-top:7vh;
+  margin-left:3vw;
+  color:red;
+}
+.cun{
+  position: fixed;
+  z-index:10;
+  margin-top:12vh;
+  margin-left:3vw;
+  color:blue;
+}
+.route{
+  position:fixed;
+  z-index:11;
+  margin-top:93vh;
+  margin-left:5%;
+  width:35%; 
+}
+.viode{
+  position:fixed;
+  z-index:10;
+  margin-top:93vh;
+  margin-left:60%;
+  width:35%;
+}
+.map{
+  width: 100%; 
+  height: 100vh;
+}

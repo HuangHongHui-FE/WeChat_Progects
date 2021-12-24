@@ -1,0 +1,49 @@
+/* page{
+  height: 100%;
+} */
+.cates{
+  height: 100%;
+}
+.cates_container{
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.left_menu{
+  /* 子项 高度 100% flex */
+  flex: 2;
+}
+.menu_item{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.right_content{
+  flex: 5;
+}
+.goods_list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.navigator1{
+  width: 33.33%;
+  text-align: center;
+}
+.image1{
+  width: 80%;
+}
+.goods_title{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delimiter{
+  color: rgb(44, 26, 204);
+  padding: 0 10rpx;
+}
+.active{
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}

@@ -1,0 +1,11 @@
+<view>
+  <view>
+    <checkbox-group bindchange="checkboxChange">
+      <view class="checkbox" wx:for="{{markers}}" wx:key="key" wx:for-item="item">
+        <view class="checked_label" style="color:#37383B">删除车位:  <text style="color: red;">{{item.title}}</text></view>
+        <checkbox style="float: right;" value="{{item.title}}" color="#2A98BD"/>
+      </view>
+    </checkbox-group>
+  </view>
+  <button type="default" bindtap="delete">删除</button>
+</view>

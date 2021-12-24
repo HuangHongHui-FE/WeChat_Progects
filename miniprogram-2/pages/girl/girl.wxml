@@ -1,0 +1,36 @@
+<view class="bp">
+  <view class="contioner">
+    <input bindinput="input1" class="man1" placeholder="肺活量"/>
+    <input bindinput="input2" class="man2" placeholder-style="color:#3333cc" placeholder="50米用时(s)"/>
+    <input bindinput="input3" class="man1" placeholder-style="color:#9933CC" placeholder="坐位体前屈(cm)"/>
+    <input bindinput="input4" class="man2" placeholder-style="color:#00CCFF" placeholder="立定跳远(cm)"/>
+    <input bindinput="input5" class="man1" placeholder-style="color:#CC3300" placeholder="1分钟仰卧起坐(个)"/>
+    <input bindinput="input6" class="man2" placeholder-style="color:#996600" placeholder="800米跑(s)"/>
+  </view>
+  <view class="contioner">
+    <text class="text1">~>分数: {{a1}}</text>
+    <text class="text1">~>分数: {{a2}}</text>
+    <text class="text1">~>分数: {{a3}}</text>
+    <text class="text1">~>分数: {{a4}}</text>
+    <text class="text1">~>分数: {{a5}}</text>
+    <text class="text1">~>分数: {{a6}}</text>
+  </view>
+</view>
+
+<view class="bp"> 
+  <view class="contioner2">
+      <input bindinput="input7" class="man1" placeholder-style="color:#996600" placeholder="身高(m)" type="digit"/>
+      <input bindinput="input8" class="man1" placeholder-style="color:#996600" placeholder="体重(kg)"/>
+  </view>
+  <view class="contioner2">
+    <text class="text1">~>BMI: {{a7}}</text>
+    <text class="text1">@分数: {{a8}}</text>
+  </view>
+</view>
+<view class="contioner3">
+  <button class="zf" bindtap="zf">查看总分</button>
+  <text class="text3">{{last}}</text>
+</view>
+<image src="7.gif" class="image1"></image>
+
+

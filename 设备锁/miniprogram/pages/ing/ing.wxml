@@ -1,0 +1,9 @@
+<view>
+  <view class="ing1" wx:for="{{ing}}" wx:for-item="item">
+    <view style="float: left; width:70vw;margin-top: 2vh;text-align:center;">{{item.title}}</view>
+    <button type="default" class="btn1" size="mini" bindtap="btn_luxian" data-item="{{item}}">路线</button>
+    <button type="default" class="btn2" size="mini" bindtap="btn_daohang" data-item="{{item}}">导航</button>
+  </view>
+</view>
+
+

@@ -1,0 +1,121 @@
+.top_title{
+  margin-top: 3vh;
+  margin-left: 3vw;
+  display: flex;
+  justify-content: space-around;
+  width: 94vw;
+  /* line-height: 8vh; */
+  height: 6vh;
+  border: 1px solid 	#400000;
+  border-radius: 2vw;
+
+}
+
+.kong{
+  position: fixed;
+  top: 20vh;
+  left: 43vw;
+  font-size: 40rpx;
+  color: rgb(118, 115, 128);
+}
+
+.top_title text{
+  text-align: center;
+  display: inline-block;
+  width: 46vw;
+  height: 5vh;
+  line-height: 5vh;
+  margin-top: 0.5vh;
+
+  /* font-size: 5vw; */
+  border-radius: 2vw;
+}
+
+.on{
+  background-color: black;
+  color: white;
+}
+.put{
+  display: flex;
+  flex-direction: column;
+  width: 94vw;
+  margin: 2vh 3vw;
+  height: 30vh;
+  border-bottom: 3rpx dotted rgb(209, 223, 236);
+}
+
+.putTop{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+}
+
+.putTopDes{
+  margin-left: 2vw;
+  width: 50vw;
+  line-height: 5vh;
+  font-family: cursive;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.putTopDes text{
+  color: rgb(29, 125, 235);
+}
+
+.outTopDes{
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  margin-left: 2vw;
+  width: 50vw;
+  line-height: 5vh;
+  font-family: cursive;
+}
+
+.outTopDes_1{
+  height: 15vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.outTopDes_2{
+  height: 5vh;
+}
+
+.outTopDes_1 text{
+  color: rgb(21, 199, 223);
+}
+.outTopDes_2{
+  color: rgb(62, 88, 238);
+  text-align: center;
+  font-size: 35rpx;
+}
+
+.putTopImg image{
+  width: 40vw;
+  height: 20vh;
+}
+
+.putBottom{
+  line-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.putBottomDelete{
+  font-size: large;
+  color: rgb(238, 85, 85);
+  
+}
+
+/*  */

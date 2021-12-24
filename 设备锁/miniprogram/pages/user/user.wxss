@@ -1,0 +1,48 @@
+.info{
+  padding-top: 80vh;
+}
+.tou_ni{
+  height: 25vh;
+  background-color: rgb(139, 179, 233);
+  margin-bottom: 5vh;
+}
+.touxiang{
+  width: 35%;
+  height: 25vh;
+  float: left;
+  border-radius: 50%;
+}
+.nicheng{
+  text-align: center;
+  padding-top: 11vh;
+  font-size: 50rpx;
+}
+.ing{
+  height: 10vh;
+  background-color: rgba(241, 241, 240, 0.863);
+  margin: auto;
+  width: 80vw;
+}
+.ing_txt{
+  padding-top: 2vh;
+  /* background-color: slategrey; */
+  text-align: center;
+  font-size: 50rpx;
+  color: rgb(12, 8, 8);
+}
+.history{
+  height: 10vh;
+  background-color: rgba(241, 241, 240, 0.863);
+  margin: auto;
+  width: 80vw;
+
+}
+.history_nav{
+  padding-top: 2vh;
+  text-align: center;
+  font-size: 50rpx;
+  color: rgb(10, 2, 2);
+}
+.hengxian{
+  margin-bottom: 5vh;
+}

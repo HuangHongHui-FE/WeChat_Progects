@@ -1,0 +1,13 @@
+<!--pages/self_occupy/self_occupy.wxml-->
+<view>
+  <view>
+    <checkbox-group bindchange="checkboxChange">
+      <view class="checkbox" wx:for="{{markers}}" wx:key="key" wx:for-item="item">
+        <view class="checked_label" style="color:#37383B">占用车位:  <text style="color: red;">{{item.title}}</text></view>
+        <checkbox style="float: right;" value="{{item.title}}" color="#2A98BD"/>
+      </view>
+    </checkbox-group>
+  </view>
+  <button type="default" bindtap="occupy" style="margin-top: 3vh;">占用选中车位</button>
+  <button type="default" bindtap="shifang" style="margin-top: 3vh;">释放选中车位</button>
+</view>

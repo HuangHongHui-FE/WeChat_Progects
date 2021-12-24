@@ -1,0 +1,70 @@
+<!--pages/history/history.wxml-->
+<view class="top_title">
+  <text class="{{active === true ? 'on': ''}}" bindtap="inBtn">我放入的纸条</text>
+  <text class="{{active === true ? '': 'on'}}" bindtap="outBtn">我抽到的纸条</text>
+</view>
+
+<!-- put -->
+<view wx:if="{{active === true? true: false}}">
+  <view class="put"
+  
+  >
+    <view class="putTop">
+      <view class="putTopImg">
+        <image src="../../images/girl.png"></image>
+      </view>
+      <view class="putTopDes">
+        <text>交友宣言:</text>jgisdos副教哈哈哈哈哈哈pod授i啊的高峰和viOS刀片大家和VS里的迫使蔡家坡
+      </view>
+    </view>
+
+    <view class="putBottom">
+      <text>河南理工大学</text>
+      <text>男</text>
+      <text class="putBottomDelete" bindtap="deletePut" data-id="aaaa">删除 !</text>
+      
+    </view>
+  </view>
+
+  <!-- <view 
+    wx:for="{{dataListPut}}"
+    wx:key="id"
+  >
+    aaaa
+
+  </view> -->
+</view>
+
+
+<!-- out -->
+<view wx:else>
+  <view class="put"
+  
+  >
+    <view class="putTop">
+      <view class="putTopImg">
+        <image src="../../images/girl.png"></image>
+      </view>
+      <view class="outTopDes">
+        <view class="outTopDes_1">
+          <text>交友宣言:</text>jgisdos副教哈哈哈哈哈哈pod授i啊的高峰和viOS刀片大家和VS里的迫使蔡家坡
+        </view>
+
+        <view class="outTopDes_2">
+          1234567890poiuygfdvb
+        </view>
+        
+      </view>
+    </view>
+
+    <view class="putBottom">
+      <text>河南理工大学</text>
+      <text>男</text>
+      <text class="putBottomDelete" bindtap="deleteOut" data-id="aaaa">删除 !</text>
+      
+    </view>
+  </view>
+</view>
+
+
+

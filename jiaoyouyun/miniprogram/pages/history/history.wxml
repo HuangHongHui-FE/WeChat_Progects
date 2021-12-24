@@ -1,0 +1,65 @@
+<!--pages/history/history.wxml-->
+<view class="top_title">
+  <text class="{{active === true ? 'on': ''}}" bindtap="inBtn">我放入的纸条</text>
+  <text class="{{active === true ? '': 'on'}}" bindtap="outBtn">我抽到的纸条</text>
+</view>
+
+<!-- 没有数据时显示 -->
+<view class="kong" wx:if="{{active === true? true: false}}" hidden="{{dataListPut.length == 0 ? false: true}}">空空如也</view>
+<view class="kong" wx:else hidden="{{dataListOut.length == 0 ? false: true}}">空空如也</view>
+
+<!-- put -->
+<view wx:if="{{active === true? true: false}}">
+  <view class="put"
+    wx:for="{{dataListPut}}"
+    wx:key="_id"
+  >
+    <view class="putTop">
+      <view class="putTopImg">
+        <image src="{{item.picture}}"></image>
+      </view>
+      <view class="putTopDes">
+        <text>交友宣言:</text>{{item.des}}
+      </view>
+    </view>
+
+    <view class="putBottom">
+      <text>{{schoolList[item.location]}}</text>
+      <text>{{item.sex == 1? '男': '女'}}</text>
+      <text class="putBottomDelete" bindtap="deletePut" data-id="{{item._id}}">删除 !</text>
+    </view>
+  </view>
+</view>
+
+
+<!-- out -->
+<view wx:else>
+  <view class="put"
+    wx:for="{{dataListOut}}"
+    wx:key="_id"
+  >
+    <view class="putTop">
+      <view class="putTopImg">
+        <image src="{{item.picture}}"></image>
+      </view>
+      <view class="outTopDes">
+        <view class="outTopDes_1">
+          <text>交友宣言:</text>{{item.des}}
+        </view>
+
+        <view class="outTopDes_2">
+          {{item.weChatId}}
+        </view>
+      </view>
+    </view>
+
+    <view class="putBottom">
+      <text>{{schoolList[item.location]}}</text>
+      <text>{{item.sex == 1? '男': '女'}}</text>
+      <text class="putBottomDelete" bindtap="deleteOut" data-id="{{item._id}}">删除 !</text>
+    </view>
+  </view>
+</view>
+
+
+

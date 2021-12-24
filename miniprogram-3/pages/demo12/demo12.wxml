@@ -1,0 +1,33 @@
+<!-- <button>默认按钮</button> -->
+<button size="mini">mini 按钮</button>
+<button type="primary">改变按钮颜色</button>
+<button type="warn"  plain="true">plain按钮</button>
+<button type="warn">plain按钮</button>
+
+<button disabled="true">disabled按钮</button>
+<button loading="true">loading按钮</button>
+<button hover-class="none">hover-class按钮</button>
+
+
+<!-- 
+  1. button  开发能力
+  2. contact   需要在微信小程序后台配置
+  3. share     不能转发到微信朋友圈
+  4. getPhoneNumber  获取用户的手机号码信息，结合事件来使用，不是企业级的小程序账号，没有这权利
+    1. 绑定一个事件 bindgetphonenumber
+    2. 在事件的回调中函数中，通过参数来获取信息
+    3. 获取到的信息已经加密过了：
+        需要用户在自己搭建的后台服务器中进行解析后，返回小程序就能看到了
+  5. getUserInfo   同上，但不加密
+  6. launchApp  在小程序中直接打开APP
+      1. 需要在APP中通过某个链接，打开小程序
+      2. 同样在小程序中，再通过这个功能打开APP
+      例：京东的APP,与京东的小程序
+ -->
+<button open-type="contact">contact客服聊天</button>
+<button open-type="share">share分享</button>
+<!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">getPhoneNumber授权手机号</button> -->
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">getUserInfo授权用户名</button> -->
+<button open-type="launchApp">launchApp</button>
+<button open-type="openSetting">openSetting打开授权情况</button>
+<button open-type="feedback">feedback反馈意见</button>

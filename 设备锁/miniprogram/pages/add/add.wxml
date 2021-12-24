@@ -1,0 +1,9 @@
+<!--pages/add/add.wxml-->
+<!-- <view style="text-align:center">title代表数量会自动+1</view> -->
+<view style="margin-left: 5%; margin-right:10%; margin-top:5vh;">
+  <input type="text" style="height: 7vh;background-color:#C0C0C0;" placeholder-style="color:#F76260" placeholder="请输入latitude" bindinput="latInput" value="{{latitude_input}}"></input>
+  <view style="margin-top:3vh; margin-bottom:3vh;">{{lat_error}}</view>
+  <input type="text" placeholder="请输入longitude" placeholder-style="color:#F76260" style="height: 7vh;background-color:#C0C0C0;" bindinput="lonInput" value="{{longitude_input}}"></input>
+  <view style="margin-top:3vh; margin-bottom:3vh;">{{lon_error}}</view>
+</view>
+<button type="primary" bindtap="add_sub" style="margin-top:5vh;">提交</button>

@@ -1,0 +1,6 @@
+<view class="his" wx:for="{{self_money}}" wx:for-item="item">
+  <view class="date_class" space>日期: {{item.date}}</view>
+  <view class="time_class" space>时长: {{item.time}}</view>
+  <view class="title_class" space>title: {{item.title}}</view>
+  <view class="pay_class" space>收款: <text style="color: red;">{{item.pay}}</text>元</view>
+</view>

@@ -1,0 +1,28 @@
+.contioner{
+  background-color: lime;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.image1{
+  width: 375rpx;
+  height: 375rpx;
+  border-radius: 50%;
+}
+.start1{
+  display: inline;
+  color: burlywood;
+  font-size: 70rpx;
+  border: 3px solid #ff33cc;
+  border-radius: 30%;
+}
+.nav-hover{
+  color: red;
+}
+.QQ{
+  color:yellow;
+}
+
+

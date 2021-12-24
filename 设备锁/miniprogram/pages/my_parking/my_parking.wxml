@@ -1,0 +1,31 @@
+<view wx:if="{{userinfo_admin}}">
+  <!-- 地图 -->
+  <view>
+    <map class="map_sty" longitude="{{longitude}}" latitude="{{latitude}}"  markers="{{self_markers}}" show-location="true" bindmarkertap="markstap" scale="17" >
+    </map>
+  </view>
+  <!-- 中间操作 -->
+  <view class="mid">
+    <view class="mid_del">
+      <navigator url="/pages/delete/delete" open-type="navigate">删除车位</navigator>
+    </view>
+    <view class="mid_add">
+      <navigator url="/pages/add/add" open-type="navigate">增加车位</navigator>
+    </view>
+    <view class="mid_zs">
+      <navigator url="/pages/self_occupy/self_occupy" open-type="navigate">占/释车位</navigator>
+    </view>
+  </view>
+  <!-- 使用记录 -->
+  <view class="jilu">
+      <navigator url="/pages/self_hty/self_hty" open-type="navigate">车位使用记录</navigator>
+  </view>
+  <!-- 收入 -->
+  <view class="get">
+      <navigator url="/pages/self_money/self_money" open-type="navigate">收入记录</navigator>
+  </view>
+</view>
+
+<view wx:else>
+  <view class="not_admin">你已不是管理员，请返回重新申请！</view>
+</view>

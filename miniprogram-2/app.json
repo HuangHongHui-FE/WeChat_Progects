@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/man/man",
+    "pages/girl/girl"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "text": "男生",
+        "pagePath": "pages/man/man",
+        "iconPath": "man.jpg",
+        "selectedIconPath": "man.jpg"
+      },
+      {
+        "text": "女生",
+        "pagePath": "pages/girl/girl",
+        "iconPath": "girl.jpg",
+        "selectedIconPath": "girl.jpg"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#FFFF00"
+  },
+
+  "window":{
+    "navigationBarBackgroundColor":"#9900CC"
+  },
+  "sitemapLocation": "sitemap.json"
+}

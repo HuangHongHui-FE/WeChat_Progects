@@ -1,0 +1,12 @@
+.index1{
+  color: rgb(250, 249, 249);
+  font-size: 35rpx;
+  border: 2px solid #9ee9ae;
+  color: rgb(0, 7, 2);
+  width: 60%;
+  margin-top: 70vh;
+  margin: auto;
+  text-align: center;
+  height: 6vh;
+  padding-top: 2vh;
+}

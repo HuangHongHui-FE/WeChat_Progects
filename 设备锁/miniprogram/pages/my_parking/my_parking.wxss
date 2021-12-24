@@ -1,0 +1,63 @@
+/* pages/my_parking/ma_parking.wxss */
+.not_admin{
+  margin-top: 45vh;
+  text-align:center;
+  color: red;
+  font-size:40rpx;
+}
+.map_sty{
+  width: 100%;
+  height: 70vh;
+}
+.mid{
+  height:8vh; 
+  margin-top: 1vh;
+  display: flex;
+  justify-content: space-between;
+}
+.mid_del{
+  background-color:rgb(226, 235, 209); 
+  width: 30%; 
+  text-align: center; 
+  padding-top: 2vh; 
+  font-size:40rpx; 
+  border-radius: 50rpx;
+}
+.mid_add {
+  background-color:rgb(226, 235, 209);
+  width: 30%; 
+  text-align: center; 
+  padding-top: 2vh; 
+  font-size:40rpx;
+  border-radius: 50rpx;
+}
+.mid_zs{
+  background-color:rgb(226, 235, 209);
+  width: 30%;
+  text-align: center; 
+  padding-top: 2vh; 
+  font-size:40rpx; 
+  border-radius: 50rpx;
+}
+.jilu{
+  width: 70vw; 
+  height: 6vh;
+  background-color:#E6E6FA; 
+  margin:auto; 
+  text-align:center; 
+  padding-top:1vh; 
+  font-size:50rpx; 
+  border-radius: 50rpx; 
+  margin-top:2vh;
+}
+.get{
+  width: 70vw;
+  height: 6vh;
+  background-color:#E6E6FA;
+  margin:auto;
+  text-align:center;
+  padding-top:1vh;
+  font-size:50rpx;
+  border-radius: 50rpx;
+  margin-top:2vh;
+}

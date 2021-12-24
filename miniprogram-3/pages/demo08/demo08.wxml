@@ -1,0 +1,6 @@
+<!--pages/demo08/demo08.wxml-->
+<!-- 1. 长按文字复制
+     2. 对文本内容进行解码 -->
+<text selectable decode>
+  text &nbsp; 123 &lt; 1 &gt; 2 &amp; 3 &apos; 4 &ensp; 5 &emsp;
+</text>

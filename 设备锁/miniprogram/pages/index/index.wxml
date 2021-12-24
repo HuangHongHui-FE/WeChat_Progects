@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view  wx:if="{{!userinfo}}">
+  <view class="not_login">
+    <navigator url="/pages/user/user" hover-class="nav-hover" class="index1" open-type='switchTab'>请先到个人中心登录授权</navigator>
+  </view>
+</view>
+
+
+<view wx:else>
+  <view>
+
+    <!-- 定位 -->
+      <button size="mini" class="location" bindtap="getlocation">
+        <image mode="aspectFit" style="width:15px;height:15px;" src="../../images/local.png"></image>
+      </button>
+    <!-- + -->
+      <button size="mini" class="jia_btn" bindtap="jia_scale">
+        <view class="jia">+</view>
+      </button>
+
+      <button size="mini" class="jian_btn" bindtap="jian_scale">
+        <view class="jian">-</view>
+      </button>
+
+      <view class="kong">
+        <text class="icon-tingchedian-lan iconfont" style="font-size: 4vh;"></text>
+        -空闲
+      </view>
+      <view class="yi">
+        <text class="icon-tingchedian iconfont" style="font-size: 4vh;"></text>
+        -已占
+      </view>
+      <view class="cun">
+        <text class="icon-tingchedian-lan iconfont" style="font-size: 4vh;"></text>
+        -存在
+      </view>
+      
+      <view class="route">
+        <button bindtap="getluxian" wx:if="{{marks_middle.length}}" data-item="{{marks_middle}}"   type="primary" style="width:100%;border-radius: 50rpx;">路线规划</button>
+      </view>
+      <view class="viode">
+        <button bindtap="getyuyin" wx:if="{{marks_middle.length}}" data-item="{{marks_middle}}" type="primary" style="width:100%;border-radius: 50rpx;">语音导航</button>
+      </view>
+    
+      <!-- 开定位提示 -->
+      <!-- <view >
+        <text style="color:red; position: fixed;z-index: 10;margin-left: 30%;">提示:请先打开手机定位!</text>
+      </view> -->
+
+    <map class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}"  markers="{{marks}}" show-location="true" polyline="{{polyline}}" bindmarkertap="markstap" enable-overlooking="true" enable-traffic="true" enable-building="true" bindtap="getMap_location">
+    </map>
+
+  </view>
+</view>
+
+
+
+
+

@@ -1,0 +1,9 @@
+<view  wx:if="{{!userinfo}}">
+  <view style="margin-top: 75vh;"></view>
+  <view class='info'>
+    <navigator url="/pages/user/user" hover-class="nav-hover" class="index1" open-type='switchTab'>请先到个人中心登录授权</navigator>
+  </view>
+</view>
+<view wx:else>
+
+</view>

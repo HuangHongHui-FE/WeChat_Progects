@@ -1,0 +1,39 @@
+<view wx:if="{{!userinfo_admin}}">
+  <view style="margin-top:5vh;">用户_id: <text style="color:red;">{{_id}}</text></view>
+
+  <view style="backgroundColor:red;margin-top: 5vh;">
+    <text style="width: 15%;float:left;">手机号:</text>
+    <input placeholder="请输入收款手机号:" placeholder-style="color:red;" style="border:2px solid #a1a1a1;width:50%" value="{{input_number}}" type="number" bindinput="bind_number"></input>
+  </view>
+  
+  <view style="margin-top:5vh;">
+    <picker bindchange="typeChange" value="{{index}}" range="{{type}}">
+      <view class="picker">
+      车位类型：<text style="color: red;">{{type[index]}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <view style="margin-top:5vh;">
+    <picker mode="region" bindchange="RegionChange" value="{{region}}">
+      <view>
+      车位地址: <text style="color: red;">{{region[0]}}--{{region[1]}}--{{region[2]}}</text>
+      </view>
+    </picker>
+    <view style="margin-top:5vh;">
+        <text>车位具体地址(街道，小区，地点): </text>
+        <input type="text" style="border:2px solid #a1a1a1;" value="{{input_address}}" bindinput="bind_address"></input>
+      </view>
+  </view>
+
+  <view style="margin-top:5vh;"><text style="color:red;">提醒:</text>
+    <text>请务必提交正确的信息,重复提交会更新提交的信息,请尽量避免重复提交,审核成功后</text>
+  </view>
+  <view style="margin-top:10vh;">
+    <button type="default" bindtap="btn_submit">提交申请</button>
+  </view>
+</view>
+
+<view wx:else>
+  <view style="text-align:center;color: red;font-size:40rpx;">你已成为管理员，请返回重进！</view>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/home/home.wxml-->
+<view class="head">
+  <!-- 性别筛选 -->
+  <picker bindchange="bindSexChange" value="{{sexIndex}}" range="{{sexLs}}" class="sex_picker">
+    <view>
+      - {{sexLs[sexIndex]}} -
+    </view>
+  </picker>
+
+  <!-- 学校筛选 -->
+  <picker bindchange="bindSchChange" value="{{schIndex}}" range="{{schLs}}" class="sch_picker">
+    <view>
+      - {{schLs[schIndex]}} -
+    </view>
+  </picker>
+
+  <!-- 默认排序 -->
+  <view class="moren" bindtap="bindSort">
+    默认排序
+  </view>
+</view>
+
+
+<view class="content">
+  <!-- 没有数据时显示 -->
+  <view class="kong" hidden="{{dataList.length == 0 ? false: true}}">空空如也</view>
+
+  <!-- put -->
+  <view class="put"
+    wx:for="{{dataList}}"
+    wx:key="_id"
+  >
+    <view class="putTop">
+      <view class="putTopImg">
+        <image src="../../images/touman.png" wx:if="item.sex == '1'"></image>
+        <image src="../../images/tougirl.png" wx:else></image>
+      </view>
+      <view class="putTopDes">
+        <text>交友宣言:</text>{{item.des}}
+      </view>
+    </view>
+
+    <view class="putBottom">
+      <text>{{schLs[item.location]}}</text>
+      <text>{{item.sex == 1? '男': '女'}}</text>
+      <text class="putBottomDelete" bindtap="pullOut" data-item="{{item}}">抽出！</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="footer" bindtap="goIndex">
+  上大厅
+</view>

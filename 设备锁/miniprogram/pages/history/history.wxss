@@ -1,0 +1,25 @@
+.his{
+  margin-top: 2vh;
+  border: 2px solid rgb(83, 49, 238);
+  height: 8vh;
+  background-color: hsl(0, 0%, 100%);
+}
+.date_class{
+  width:60%;
+  float: left;
+}
+.time_class{
+  width:40%;
+  float: right;
+
+}
+.title_class{
+  width:60%;
+  float: left;
+
+}
+.pay_class{
+  width:40%;
+  float: right;
+}
+

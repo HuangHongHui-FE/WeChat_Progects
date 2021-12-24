@@ -1,0 +1,16 @@
+.ing1{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: rgb(226, 235, 209);
+  height: 8vh;
+}
+.btn1{
+  float:right;
+  width: 16vw;
+  margin-top: 1vh;
+  font-size:40rpx;
+}
+.btn2{
+  margin-top: 1vh;
+  position: absolute;
+}

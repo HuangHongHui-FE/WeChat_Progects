@@ -1,0 +1,10 @@
+<!-- open-type 跳转的方式:
+    1. navigate  默认值  保留当前页面，跳转到应用内的某个页面  但不能跳到tabbar页面
+    2. redirect  关闭当前页面，跳转到应用内的某个页面，但不允许跳到tabbar页面。
+    3. switchTab 跳转到 tabbar 页面，并关闭其他所有非tabbar页面
+    4. reLaunch  关闭所有页面，打开应用内的某个页面
+-->
+<navigator url="/pages/demo10/demo10" hover-start-time="100" open-type="redirect">轮播图页面</navigator>
+<navigator url="/pages/index/index" open-type="reLaunch">relaunch 可以随便跳</navigator>
+<navigator url="/pages/index/index" open-type="switchTab">跳转到tabbar</navigator>
+<navigator target="miniProgram" app-id="wx4daaa035791760f0" path="pages/girl/girl" version="release" hover-class="none" >跳转到体测分数计算</navigator>

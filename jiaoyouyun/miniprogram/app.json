@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundColor": "#FFCCFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFCCFF",
+    "navigationBarTitleText": "校园交U",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#D00000",
+    "position": "top",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "抽个对象"
+    },
+    {
+      "pagePath": "pages/home/home",
+      "text": "友友大厅"
+    },
+    {
+      "pagePath": "pages/history/history",
+      "text": "我的纸条"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

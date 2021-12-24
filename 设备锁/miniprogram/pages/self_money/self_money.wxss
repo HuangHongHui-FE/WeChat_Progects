@@ -1,0 +1,27 @@
+/* pages/self_money/self_money.wxss */
+/* pages/self_hty/self_hty.wxss */
+.his{
+  margin-top: 2vh;
+  border: 2px solid red;
+  height: 8vh;
+  background-color: rgb(216, 241, 158);
+}
+.date_class{
+  width:60%;
+  float: left;
+}
+.time_class{
+  width:40%;
+  float: right;
+
+}
+.title_class{
+  width:60%;
+  float: left;
+
+}
+.pay_class{
+  width:40%;
+  float: right;
+}
+

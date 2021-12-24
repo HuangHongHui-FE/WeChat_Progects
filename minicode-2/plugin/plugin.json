@@ -1,0 +1,6 @@
+{
+  "publicComponents": {
+    "login": "components/login/login"
+  },
+  "main": "index.js"
+}

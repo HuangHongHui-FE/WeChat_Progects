@@ -1,0 +1,8 @@
+<view class='contioner'>
+<image src='1.png' class='image1'></image>
+<navigator url="/pages/man/man" hover-class="nav-hover" class="start1" style="display:inline"  open-type='switchTab'>开始计算</navigator>
+<text>当前仅供大一大二使用,大三大四的等待更新</text>
+<text>注:如有侵权等问题,联系QQ:</text><text class="QQ">3167253066</text>
+</view>
+
+

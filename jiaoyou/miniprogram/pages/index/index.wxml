@@ -1,0 +1,261 @@
+<!--index.wxml-->
+<view class="page"></view>
+
+<view class="swiper_view">
+  <swiper autoplay="true" interval="3000" duration="500" circular="true" class="swiper">
+    <swiper-item><image mode="widthFix" src="../../images/_3.jpg"></image></swiper-item>
+    <swiper-item><image mode="widthFix" src="../../images/_3.jpg"></image></swiper-item>
+    <swiper-item><image mode="widthFix" src="../../images/_3.jpg"></image></swiper-item>
+  </swiper>
+  <!-- scaleToFill -->
+</view>
+
+<!-- 男女内容 -->
+<view class="content">
+
+  <view class="body">
+    <view class="body_top"></view>
+    <view class="body_img">
+      <image src="../../images/man.png" mode="scaleToFill"></image>
+    </view>
+    <view class="body_bottom">
+      <view class="body_bottom_put" bindtap="putBody">放入一张男生纸条</view>
+      <view class="body_bottom_out" bindtap="outBody">抽取一张男生纸条</view>
+    </view>
+  </view>
+
+  <view class="girl">
+    <view class="girl_top"></view>
+    <view class="girl_img">
+      <image src="../../images/girl.png" mode="scaleToFill"></image>
+    </view>
+    <view class="girl_bottom">
+      <view class="girl_bottom_put" bindtap="putGirl">放入一张女生纸条</view>
+      <view class="girl_bottom_out" bindtap="outGirl">抽取一张女生纸条</view>
+    </view>
+    
+  </view>
+</view>
+
+
+<!-- 遮罩层-->
+<view class="hide" wx:if="{{putBodyMask || outBodyMask || putGirlMask || outGirlMask}}" bindtap="cancelHide"></view>
+
+<!--男生放入的弹出框 -->
+<view class="show_body" wx:if="{{putBodyMask}}">
+  <view class="show_body_top">
+    <text class="show_body_top_1">放入一张男生纸条</text>
+    <text class="show_body_top_2" bindtap="cancelHide">X</text>
+  </view>
+
+  <view class="show_body_content">
+    <view class="show_body_content_1">
+      <text>放入的学校</text>
+      <picker bindchange="bindSchoolChangePut" value="{{indexBody4}}" range="{{arrayBody4}}" class="out_body_content_2_picker">
+          <view>
+            - {{arrayBody4[indexBody4]}} -
+          </view>
+      </picker>
+    </view>
+
+    <!-- 交友宣言 -->
+    <view class="show_body_content_2">
+      <textarea placeholder="交友宣言" placeholder-style="color:red;" fixed bindinput="textareaInputBody" />
+    </view>
+
+    <view class="show_body_content_3">
+    
+      <view wx:for="{{srcListBody}}"
+      wx:for-item="value"
+      wx:for-index="index"
+      wx:key="index"
+      class="show_body_content_3_img"
+      >
+        <image src="{{value}}" mode="scaleToFill"></image>
+      </view>
+      <view class="show_body_content_3_add" bindtap="chooseImgBody" wx:if="{{srcListBody.length == 1 ? false: true}}">+</view>
+    </view>
+
+    <view class="show_body_content_4">
+      <!-- <picker bindchange="bindSexChange" value="{{indexBody}}" range="{{arrayBody}}" class="show_body_content_4_picker">
+        <view>
+          -{{arrayBody[indexBody]}}-
+        </view>
+      </picker> -->
+      <text>我的微信号</text>
+      <input class="show_body_content_4_input" value="{{numberBody}}" bindinput="numberInputBody" />
+    </view>
+
+    <view class="show_body_content_5">
+      <text space="ensp">纸条的生命</text>
+      <picker bindchange="bindLiveChange" value="{{indexBody2}}" range="{{arrayBody2}}" class="show_body_content_5_picker">
+        <view>
+          - {{arrayBody2[indexBody2]}} -
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="price">
+    1元/次
+  </view>
+
+  <view class="out_body_btn">
+    <button bindtap="surePutBodyBtn">确认放入</button>
+  </view>
+</view>
+
+<!-- 男生抽出的弹出框 -->
+<view class="out_body" wx:if="{{outBodyMask}}">
+
+  <view class="show_body_top">
+    <text class="show_body_top_1">抽取一张男生纸条</text>
+    <text class="show_body_top_2" bindtap="cancelHide">X</text>
+  </view>
+
+  <view class="out_body_img_1">
+    <image src="../../images/man2.png"></image>
+  </view>
+
+  <view class="out_body_content_2">
+    <text>纸条所在的学校</text>
+    <picker bindchange="bindSchoolChangeOut" value="{{indexBody3}}" range="{{arrayBody3}}" class="out_body_content_2_picker">
+        <view>
+          - {{arrayBody3[indexBody3]}} -
+        </view>
+    </picker>
+  </view>
+
+  <view class="out_body_btn">
+    <button bindtap="sureOutBodyBtn">确认抽取一张</button>
+  </view>
+</view>
+
+<!-- 女生放入的弹出框 -->
+<view class="show_body" wx:if="{{putGirlMask}}">
+  <view class="show_body_top">
+    <text class="show_body_top_1">放入一张女生纸条</text>
+    <text class="show_body_top_2" bindtap="cancelHide">X</text>
+  </view>
+
+  <view class="show_body_content">
+    <view class="show_body_content_1">
+      <text>放入的学校</text>
+      <picker bindchange="bindSchoolChangePutGirl" value="{{indexGirl4}}" range="{{arrayGirl4}}" class="out_body_content_2_picker">
+          <view>
+            - {{arrayBody4[indexGirl4]}} -
+          </view>
+      </picker>
+    </view>
+
+    <view class="show_body_content_2">
+      <textarea placeholder="交友宣言" placeholder-style="color:red;" fixed bindinput="textareaInputGirl" />
+    </view>
+
+    <view class="show_body_content_3">
+    
+      <view wx:for="{{srcListGirl}}"
+      wx:for-item="value"
+      wx:for-index="index"
+      wx:key="index"
+      class="show_body_content_3_img"
+      >
+        <image src="{{value}}" mode="scaleToFill"></image>
+      </view>
+      <view class="show_body_content_3_add" bindtap="chooseImgGirl" wx:if="{{srcListGirl.length == 1 ? false: true}}">+</view>
+    </view>
+
+    <view class="show_body_content_4">
+      <!-- <picker bindchange="bindSexChangeGirl" value="{{indexGirl}}" range="{{arrayGirl}}" class="show_body_content_4_picker">
+        <view>
+          -{{arrayGirl[indexGirl]}}-
+        </view>
+      </picker> -->
+      <text>我的微信号</text>
+      <input type="number" class="show_body_content_4_input" value="{{numberGirl}}" />
+    </view>
+
+    <view class="show_body_content_5">
+      <text space="ensp">纸条的生命</text>
+      <picker bindchange="bindLiveChangeGirl" value="{{indexGirl2}}" range="{{arrayGirl2}}" class="show_body_content_5_picker">
+        <view>
+          - {{arrayGirl2[indexGirl2]}} -
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="price">
+    1元/次
+  </view>
+
+  <view class="out_body_btn">
+    <button bindtap="surePutGirlBtn">确认放入</button>
+  </view>
+</view>
+
+<!-- 女生抽出的弹出框 -->
+<view class="out_body" wx:if="{{outGirlMask}}">
+
+  <view class="show_body_top">
+    <text class="show_body_top_1">抽取一张女生纸条</text>
+    <text class="show_body_top_2" bindtap="cancelHide">X</text>
+  </view>
+
+  <view class="out_body_img_1">
+    <image src="../../images/man2.png"></image>
+  </view>
+
+  <view class="out_body_content_2">
+    <text>纸条所在的学校</text>
+    <picker bindchange="bindSchoolChangeOutGirl" value="{{indexGirl3}}" range="{{arrayGirl3}}" class="out_body_content_2_picker">
+        <view>
+          - {{arrayGirl3[indexGirl3]}} -
+        </view>
+    </picker>
+  </view>
+
+  <view class="out_body_btn">
+    <button bindtap="sureOutGirlBtn">确认抽取一张</button>
+  </view>
+</view>
+
+
+
+
+<view class="container">
+
+  <!-- <view class="userinfo">
+
+    <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
+      <view class="userinfo-block-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </block>
+
+    <block wx:elif="{{!hasUserInfo}}">
+      <button 
+        wx:if="{{canIUseGetUserProfile}}" 
+        bindtap="getUserProfile"
+        class="userinfo-avatar"
+        style="background-image: url({{avatarUrl}})"
+        size="default"
+      ></button>
+
+      <button
+        wx:else
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        class="userinfo-avatar"
+        style="background-image: url({{avatarUrl}})"
+        size="default"
+      ></button>
+    </block>
+
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    </block>
+  </view> -->
+
+
+</view>

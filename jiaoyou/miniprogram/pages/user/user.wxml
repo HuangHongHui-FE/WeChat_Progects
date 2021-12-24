@@ -1,0 +1,2 @@
+<!--pages/user/user.wxml-->
+<button bindtap="getUser">登录</button>

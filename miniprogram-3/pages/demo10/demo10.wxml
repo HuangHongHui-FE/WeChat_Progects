@@ -1,0 +1,17 @@
+<!-- 
+  1. 轮播图外层容器  swiper
+  2. 每一个轮播项 swiper-item
+  3. swiper标签 存在默认样式
+    1. width：100%
+    2. height: 150px    image存在默认320 * 240
+  4. 原图的宽度和高度:(以7为例)80 * 102
+     swiper 宽度 / swiper 高度  =  原图的宽度  /  原图的高度
+     swiper 高度  =  swiper宽度 * 原图的高度  /  原图的宽度
+     height : 100vw * 102  /  80
+ -->
+
+ <swiper indicator-dots="true" indicator-color="red" indicator-active-color="yellow" autoplay="true" current="2" interval="1000" duration="1000" circular="true">
+  <swiper-item><image mode="widthFix" src="7.png"></image></swiper-item>
+  <swiper-item><image mode="widthFix" src="8.png"></image></swiper-item>
+  <swiper-item><image mode="widthFix" src="9.png"></image></swiper-item>
+ </swiper>
