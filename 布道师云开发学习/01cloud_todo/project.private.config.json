@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "addTodo",
+          "pathName": "pages/addTodo/addTodo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "todoInfo",
+          "pathName": "pages/todoInfo/todoInfo",
+          "query": "id=cd045e7561131d6204df9e575d9621e2",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
